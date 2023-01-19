@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+ <script>
+            function cal(){
+                var m1 = Number(document.getElementById("m1").value);
+                var r1 = Number(document.getElementById("r1").value);
+                var t1 = document.getElementById("t1").value;
+                var res1;
+                var res2;
+
+                res1 = (m1*t1)+((m1*r1/12)+(m1*r1/12*t1))*(t1/2)
+                res2 = (m1*(1+r1/12))*(1-(1+r1/12)**(t1))/(1-(1+r1/12))
+
+                document.getElementById("res1").value = res1;
+                document.getElementById("res2").value = res2;
+
+            }
+        </script>
+    <body>
+        매달 넣을 금액:
+        <input type="text" id="m1"><br>
+        이율(ex:4.5% -> 0.045):
+        <input type="text" id="r1"><br>
+        개월 :
+        <input type="text" id="t1"><br>
+        단리:
+        <input type="text" id="res1"><br>
+        복리:
+        <input type="text" id="res2">
+<br><br>
+        <input type="button" value="계산하기" onclick="cal()">
+    </body>
+</html>
+
