@@ -16,7 +16,7 @@
                 res2 = (m1*(1+r1/12))*(1-(1+r1/12)**(t1))/(1-(1+r1/12))
 
                 document.getElementById("res1").value = res1;
-                document.getElementById("res2").value = res2;
+                document.getElementById("res2").value = Math.floor(res2);
 
             }
         </script>
@@ -27,9 +27,9 @@
         <input type="text" id="r1"><br>
         개월 :
         <input type="text" id="t1"><br>
-        단리:
+        단리(입력X):
         <input type="text" id="res1"><br>
-        복리:
+        복리(입력X):
         <input type="text" id="res2">
 <br><br>
         <input type="button" value="계산하기" onclick="cal()">
